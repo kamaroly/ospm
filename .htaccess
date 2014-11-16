@@ -1,0 +1,16 @@
+#Options +FollowSymlinks
+RewriteEngine On
+
+# DEVELOPMENT SITE RULES
+RewriteRule ^$ /workspace/cyberience_projects/index.php [L]
+RewriteCond $1 !^(index\.php|img|css|js|robots\.txt|favicon\.ico|update\.php|install\.php)
+RewriteRule ^(.*)$ /workspace/cyberience_projects/index.php/$1 [L]
+
+#RewriteRule ^([a-zA-Z0-9_-]+)$ /workspace/cyberience_projects/index.php/$1 [L]
+#RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ /workspace/cyberience_projects/index.php/$1/$2 [L]
+#RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ /workspace/cyberience_projects/index.php/$1/$2/$3 [L]
+
+# LIVE SITE RULES
+#RewriteRule ^$ /index.php [L]
+#RewriteCond $1 !^(index\.php|img|css|js|robots\.txt|favicon\.ico|update\.php|install\.php)
+#RewriteRule ^(.*)$ /index.php/$1 [L]

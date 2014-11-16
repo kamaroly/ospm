@@ -1,0 +1,1 @@
+$($.date_input.initialize);

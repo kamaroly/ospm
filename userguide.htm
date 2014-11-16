@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<title>Cyberience Projects User Guide</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style>
+body{
+	font-family: Futura, Century Gothic, AppleGothic, sans-serif;
+	font-size:15px;
+	background-color:#eee;
+	color:#333;
+	margin:0 auto;
+	width:100%;
+}
+h2{
+	border-bottom:3px solid #560101;
+}
+h3{
+	border-bottom:1px solid #171717;
+	margin-top:14px;
+	margin-bottom:4px;
+}
+p{
+	margin:8px 0;
+}
+#main_content{
+	width:700px;
+	margin:0 auto;
+}
+</style>
+</head>
+<body>
+<div id="main_content">
+<h1>Cyberience Projects</h1>
+<h2>System Guide</h2>
+<p>Cyberience Projects is a web based open source project management software application built using the PHP CodeIgniter framework.</p>
+
+<p>The main features of the application are Project and Task Collaboration; Client Management and Invoicing; User Management and Timetracking. All these features are integrated together to increase the productivity and management of your team and projects.</p>
+
+<p>The software was previously known as PHP Project Manager and Cyberience Project Manager, however, has been completely redesigned and rewritten to offer a powerful, user friendly, customisable web based application.</p>
+
+<p>To install Cyberience Projects you will need a web-server and a database. These can be installed on your home machine if required.</p>
+
+<p>Cyberience Projects is developed by Cyberience Internet Solutions who are based in Livingston, Scotland, United Kingdom</p>
+
+<h2>Features</h2>
+<ul>
+<li>Create Tasks, Bugs and Milestones in a simplified ticketing system to ensure all data is in the one place</li>
+<li>Generate automatic Invoices and Receipts in PDF Format</li>
+<li>Link time expenditure with hourly rates to automate your invoicing process</li>
+<li>Simplified Time tracking for monitoring how long you spend on each project</li>
+<li>Allows an unlimited number of users, projects and clients</li>
+<li>Cyberience Projects is actively used and developed.</li>
+<li>Cyberience Projects is developed using modern coding standards.</li>
+<li>Built using the PHP CodeIgniter framework.</li>
+<li>Cyberience Projects is released as open source under the GPL.</li>
+</ul>
+<h2>Requirements</h2>
+<p>Cyberience Projects is built using PHP 5, and requires a database. It is built and tested on MySQL.</p>
+<p>If you want to get rid of the "index.php" page, you'll also need "mod_rewrite" available to you (more on this below).</p>
+<p>Note:  We have tried to make Cyberience Projects as reliable and stable as possible, however you are using it at your own risk. You may lose data. As always, please take regular backups of your data.</p>
+<h2 id="section1">Upgrading from a previous version of Cyberience Projects</h2>
+<p>Cyberience Projects comes with an update script.</p>
+<ol>
+<li>Logout of Cyberience Projects, and make a backup of your files, and your database. I
+recommend you use tools provided by your host for this (for example PHPMyAdmin).</li>
+<li>Make copies of:
+<ul><li>cyberience_projects/application/config/config.php</li>
+<li>cyberience_projects/application/config/database.php</li>
+<li>cyberience_projects/application/config/projects.php</li>
+</ul>
+</li>
+<li>Replace all files with the new Cyberience Projects  files, and restore config.php, database.php and
+projects.php from your backups from step 2.</li>
+<li>Re-Run the installer by visiting http://www.yoursite.com/index.php/install</li>
+<li>Any version specific notes will now appear on screen. Please read and follow.</li>
+<li>Delete the file /cyberience_projects/application/controllers/install.php</li>
+<li>Confirm everything is working - If Cyberience Projects was working previously, and now you
+get a "500" error, or a blank screen, double check the files have correct permissions with
+your host.</li>
+</ol>
+<h2 id="section2">Installing Cyberience Projects</h2>
+<p>The basic installation process is as follows.</p>
+<ol>
+<li>Download the Cyberience Projects files</li>
+<li>Create a Cyberience Projects database</li>
+<li>Modify the configuration files</li>
+<li>Upload your files</li>
+<li>Run the installation script</li>
+<li>Login</li>
+<li>Delete the installation and update scripts</li>
+</ol>
+<h2>Step by Step Configuration</h2>
+<h3>Download the Cyberience Projects Files</h3>
+<p>The files needed to run Cyberience Projects are available from the site,
+http://www.cyberience.co.uk/projects. Simply download the zip file, and extract the contents to your
+computer. If you intend on uploading Cyberience Projects to your website, anywhere on your computer
+is fine, but if you intend on running Cyberience Projects of your current machine, you'll need to place it
+in a folder available to your   webserver.</p>
+<h3>Create a Cyberience Projects Database</h3>
+<p>Create a database called "cyberience_projects". You can use a different name if you want. You need not put any data
+into it, the install script covers that.</p>
+<h3>Modify the Configuration Files</h3>
+<p>Because of the nature of different computers and environments, you need to tell Cyberience Projects a
+little about how it will be running. The following configuration files need to be updated.</p>
+<ol>
+<li>Open /cyberience_projects/application/config/config.php with a text editor and
+set your $config['base_url']. If you are running this off a website it will be
+"http://www.yoursite.com" or "http://www.yoursite.com/cyberience_projects" or
+similar. This will then look like:
+$config['base_url'] = "http://www.yoursite.com/cyberience_projects";</li>
+<li>Open /cyberience_projects/application/config/database.php and enter your
+database information.</li>
+</ol>	
+
+<h3>Upload your files</h3>
+<p>Place the files on your webserver.</p>
+<h3>Run the installation script</h3>
+<p>If you visit your setup now, you'll be prompted to install Cyberience Projects. Just visit the URL
+you entered as your "base_url" above.</p>
+<h3>Login</h3>
+<p>Login using the username and password you created.</p>
+<h3>Delete the installation and update scripts</h3>
+<p>Delete the installation file - /cyberience_projects/application/controllers/install.php</p>
+<h3>Personalising Cyberience Projects</h3>
+<p></p>There are a few refinements you might want to make at this point.</p>
+
+
+<p>Update your "Settings": 	Before you can really use the system, you'll want to enter your own
+information. This would include entering your organisation details and invoice information.</p>
+<p>Update the information in the following file to customise the details to suit</p>
+<ul>
+<li>/cyberience_projects/application/config/projects.php</li>
+</ul>
+<h2>Making Cyberience Projects more secure</h2>
+<p>There are a few things that I would recommend you change now.</p>
+<ul>
+<li>In cyberience_projects/application/config/config.php you'll see a
+$config['encryption_key']. Change what it is equal to. Random gibberish is fine here.</li>
+<li>In /config/config.php you'll find $config['sess_use_database'] = FALSE; around
+line 240. You may want to set it to "TRUE" (without quotes) after you've installed
+Cyberience Projects.</li>
+<li>In cyberience_projects/application/config/config.php you'll find
+$config['sess_match_ip'] = FALSE; around line 243. You may want to set it to "TRUE"
+(without quotes) after you've installed the application. Some people are unable to login
+after this, as their ISP rotates their IP address, so this may not work for you, but for
+most people it does, and is a generally good idea.</li>
+<li>You may want to turn off database debugging in
+cyberience_projects/application/config/database.php with $db['default']
+['db_debug'] = FALSE;</li>
+<li>Delete the installation file as suggested above.</li>
+</ul>
+<h3>Changing Languages</h3>
+<p>Currently Cyberience Projects is only available in English. For future release we plan to have additional language files available. If you wish to assist with translating into other languages please contact me.</p>
+<p>To change to other languages when available, simply open up cyberience_projects/config/config.php and set
+$config['language'] = "english";
+to "french", "german", "dutch", "romanian", "spanish", "portuguese", "bulgarian",
+"swedish", or "italian"</p>
+<h3>Removing "index.php" from the address.</h3>
+<p>Due to the nature of CodeIgniter (the framework Cyberience Projects is built on), there is an
+"index.php" as part of the address for every page. For example,
+http://localhost/index.php/tasks. That annoys some people, so to get rid of it, you can
+use an htaccess command if you're on an Apache server with mod_rewrite enabled.
+Note: Not all webservers have this option. You might have to experiment, or contact
+your webhost for further advice here.</p>
+<p>Open /.htaccess in a text editor. Modify it to match your server. It looks like this:</p>
+<p>RewriteEngine on
+<br />RewriteRule ^$ /index.php [L]
+<br />RewriteCond $1 !^(index\.php|img|css|js|robots\.txt|favicon\.ico)
+<br />RewriteRule ^(.*)$ /index.php/$1 [L]</p>
+<h3>Feedback</h3>
+<p>I hope you enjoy using the software and that it improves your productivity and organisation</p>
+<p>If you have any feedback on the software, contact me at contact@cyberience.co.uk</p>
+</div>
+</body>
+</html>
